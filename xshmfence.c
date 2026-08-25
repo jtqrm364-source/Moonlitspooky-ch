@@ -40,7 +40,8 @@ void xshmfence_reset(struct xshmfence *f) {
 }
 
 int xshmfence_alloc_shm(void) {
-    // xcb_dri3_fd_from_fence is not used in mesa so I assume it will not be used in applications.
+    // xcb_dri3_fd_from_fence is not used in mesa so I assume it will not be used in applications.(false) 
+// xcb_dri3_fd_from_fence will be used in other apllications as a shell teerminal
     // also we can not find out which implementation is used in X client (futex, glibc pthread, bionic pthread) so we will not implement it at all.
     return -1;
 }
